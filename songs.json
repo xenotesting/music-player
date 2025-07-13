@@ -2,16 +2,19 @@
   {
     "title": "Magnetic",
     "artist": "NCS, springs!",
-    "file": "songs/magnetic.mp3"
+    "file": "songs/magnetic.mp3",
+    "cover": "images/magnetic.jpg"
   },
   {
     "title": "Resonance (Slowed to Perfection)",
     "artist": "Home, B9poy",
-    "file": "songs/resonance.mp3"
+    "file": "songs/resonance.mp3",
+    "cover": "images/resonance.jpg"
   },
   {
     "title": "Exotico Speedo",
-    "artist": "Laurant Lombard, APM Music",
-    "file": "songs/apm.mp3"
+    "artist": "Laurent Lombard, APM Music",
+    "file": "songs/apm.mp3",
+    "cover": "images/apm.jpg"
   }
 ]
