@@ -4,6 +4,13 @@
   <<meta charset="UTF-8">
   <title>Xeno Music Player V1</title>
   <style>
+    .song-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  padding: 20px;
+}
     body {
       background-color: #000;          
       color: #ffffff;                  
@@ -26,6 +33,8 @@
 </head>
 <body>
 
+<div class="song-grid">
+  
   <h1 id="title">Exotico Speedo</h1>
 <h2 id="artist">Laurent Lombard</h2>
 <img id="cover" src="images/apm.png" alt="Album Art">
@@ -54,7 +63,7 @@ Your browser does not support the audio element.
 <source src="songs/magnetic.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
-
+</div>
 
   <script>
     const audio = document.getElementById("audio");
