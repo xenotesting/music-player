@@ -3,95 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <title>Xeno Music Player V1</title>
- <style>
-   <style>
-.song-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  padding: 20px;
-}
+  <style>
+    body {
+      background-color: #000;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-.song {
-  width: 300px;
-  text-align: center;
-  background-color: #111;
-  color: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
+    .song-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      padding: 20px;
+    }
 
-.song img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-</style>
+    .song {
+      width: 300px;
+      text-align: center;
+      background-color: #111;
+      color: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
 
+    .song img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
 
+    .song audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="song-grid">
+    <div class="song">
+      <h2>Exotico Speedo</h2>
+      <h3>Laurent Lombard</h3>
+      <img src="images/apm.png" alt="Album Art">
+      <audio controls>
+        <source src="songs/apm.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
 
-<div class="song-grid">
-  
-  <h2 id="title">Exotico Speedo</h2>
-<h3 id="artist">Laurent Lombard</h3>
-<img id="cover" src="images/apm.png" alt="Album Art">
-<br><br>
-<audio id="audio" controls autoplay>
-<source src="songs/apm.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-</div>
+    <div class="song">
+      <h2>Resonance [Slowed to Perfection]</h2>
+      <h3>HOME, B9poy</h3>
+      <img src="images/resonance.png" alt="Album Art">
+      <audio controls>
+        <source src="songs/resonance.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
 
-<div style="height: 125px;"></div>
-<h2 id="title">Resonance [Slowed to Perfection]</h2>
-<h3 id="artist">HOME, B9poy</h3>
-<img id="cover" src="images/resonance.png" alt="Album Art">
-<br><br>
-<audio id="audio" controls autoplay>
-<source src="songs/resonance.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-</div>
-
-<div style="height: 125px;"></div>
-<h2 id="title">Magnetic</h2>
-<h3 id="artist">springs!</h3>
-<img id="cover" src="images/magnetic.png" alt="Album Art">
-<br><br>
-<audio id="audio" controls autoplay>
-<source src="songs/magnetic.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-</div>
-
-  <script>
-    const audio = document.getElementById("audio");
-
-    audio.onloadedmetadata = () => {
-      if (audio.src.includes(".mp3")) {
-        // Try to extract metadata using MediaMetadata API
-        if ("mediaSession" in navigator) {
-          navigator.mediaSession.metadata = new MediaMetadata({
-            title: "Unknown Title",
-            artist: "Unknown Artist",
-            album: "Unknown Album",
-            artwork: [
-              { src: "cover.jpg", sizes: "200x200", type: "image/jpeg" }
-            ]
-          });
-
-          document.getElementById("title").innerText = "Unknown Title";
-          document.getElementById("artist").innerText = "Unknown Artist";
-          document.getElementById("cover").src = "cover.jpg";
-          document.getElementById("cover").hidden = false;
-        }
-      }
-    };
-  </script>
-
+    <div class="song">
+      <h2>Magnetic</h2>
+      <h3>springs!</h3>
+      <img src="images/magnetic.png" alt="Album Art">
+      <audio controls>
+        <source src="songs/magnetic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
 </body>
 </html>
