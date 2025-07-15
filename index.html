@@ -72,6 +72,49 @@
     0 0 80px #ffffff;
 }
 
+    .page-header h1{
+      font-size:3rem;
+      margin:0 0 10px;
+    }
+    .page-header p{
+      font-size:1.1rem;
+      color:#ccc;
+      margin:0 0 30px;
+    }
+
+    /* ======  About dropdown  ====== */
+    .about-wrapper{
+      display:inline-block;           /* keeps it centered */
+      text-align:left;                /* inside text alignment */
+    }
+    .about-btn{
+      background:#333;
+      color:#fff;
+      border:none;
+      padding:10px 24px;
+      font-size:16px;
+      border-radius:8px;
+      cursor:pointer;
+      transition:background .25s;
+    }
+    .about-btn:hover{background:#555;}
+
+    /* the sliding panel */
+    .about-content{
+      overflow:hidden;
+      max-height:0;                   /* collapsed */
+      transition:max-height .45s ease;
+      background:#222;
+      border-radius:10px;
+      margin-top:12px;
+      padding:0 20px;                 /* horizontal padding only */
+    }
+    /* Open state */
+    .about-content.open{              /* toggled via JS */
+      max-height:300px;               /* enough to reveal full text */
+      padding:20px;                   /* adds vertical padding when open */
+    }
+    
   </style>
 </head>
 
@@ -81,6 +124,19 @@
   <h1 class="glow">Xeno Music Player V1</h1>
   <p style="color:#ccc;">Music picked by the Xeno Community! [Sorted Newest to Oldest]</p>
 </div>
+
+  <div class="about-wrapper">
+    <button class="about-btn" onclick="toggleAbout()">About</button>
+
+    <div id="aboutBox" class="about-content">
+      <p><strong>Xeno Music Player</strong> is a school‑friendly jukebox hosted
+      on Netlify. Drop your favorite tracks into the
+      <code>/songs</code> folder, add cover art to
+      <code>/images</code>, update <code>songs.json</code>, and enjoy!
+      <br><br>
+      Built with 💙 entirely in HTML / CSS / JavaScript.</p>
+    </div>
+  </div>
 
   
   <div class="song-grid">
