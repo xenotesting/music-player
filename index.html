@@ -83,37 +83,46 @@
     }
 
     /* ======  About dropdown  ====== */
-    .about-wrapper{
-      display:inline-block;           /* keeps it centered */
-      text-align:left;                /* inside text alignment */
-    }
-    .about-btn{
-      background:#333;
-      color:#fff;
-      border:none;
-      padding:10px 24px;
-      font-size:16px;
-      border-radius:8px;
-      cursor:pointer;
-      transition:background .25s;
-    }
-    .about-btn:hover{background:#555;}
+    .about-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
 
-    /* the sliding panel */
-    .about-content{
-      overflow:hidden;
-      max-height:0;                   /* collapsed */
-      transition:max-height .45s ease;
-      background:#222;
-      border-radius:10px;
-      margin-top:12px;
-      padding:0 20px;                 /* horizontal padding only */
-    }
-    /* Open state */
-    .about-content.open{              /* toggled via JS */
-      max-height:300px;               /* enough to reveal full text */
-      padding:20px;                   /* adds vertical padding when open */
-    }
+.about-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.about-btn:hover {
+  background: #222;
+}
+
+.about-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  background: #000;
+  color: #fff;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about-content.open {
+  max-height: 300px;
+  padding: 20px;
+}
+
     
   </style>
 </head>
