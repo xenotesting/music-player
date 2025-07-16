@@ -16,5 +16,23 @@
     "artist": "Laurent Lombard, APM Music",
     "file": "songs/apm.mp3",
     "cover": "images/apm.png"
+  },
+  {
+    "title": "c00lkidd_1 (feat. ilyhiryu)",
+    "artist": "77yolan",
+    "file": "songs/c00lkidd_1.mp3",
+    "cover": "images/c00lkidd_1.png"
+  },
+  {
+    "title": "bluudud_2",
+    "artist": "77yolan",
+    "file": "songs/bluudud_2.mp3",
+    "cover": "images/bluudud_2.png"
+  },
+  {
+    "title": "pr3ttyprincess_3",
+    "artist": "77yolan",
+    "file": "songs/pr3ttyprincess_3.mp3",
+    "cover": "images/pr3ttyprincess_3.png"
   }
 ]
